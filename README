@@ -1,0 +1,34 @@
+README <Cartoon>
+
+Hand-in: This is my final hand-in.
+
+Overview:
+        My cartoon displays two rabbits that are chatting around a table. The label at the top changes depending on
+        whether or not the rabbits are near the table. They eat a piece of food on the table each time
+        a "eat" button is clicked. When the user clicks the "n" key, the rabbits are in a night setting.
+        There is a quit button that quits the program.
+        This cartoon is based on one of my favorite images of two rabbits having tea at a villa.
+        Both my mom and I love this image. We hope to enjoy a tranquil lifestyle
+        and family fond moment like the two rabbits.
+
+Design Choices:
+        I've made several special design choices in this project:
+        1. There is an abstract Rabbit class inherited by two sub-classes called Rabbit1 and Rabbit2.
+           This is because the two rabbits have similarities, such as the shapes as they body parts and the color
+           of certain elements. However, they also have some differences. The colors
+           of their bodies are different and they are placed in different locations within their panes.
+           The body part variables in the Rabbit class have the default instead of private access modifier
+           because they need to be accessible to the Rabbit1 and Rabbit2 classes.
+        2. The key handler is in the pane organizer class instead of the cartoon class. This is because the key handler
+           needs access to the root pane after it has been instantiated and the different elements have been added to it.
+           The key handler sets the background image for the root pane. If the key handler were in Cartoon and used the
+           get root method in pane organizer, the root will be null and the background image cannot be added.
+           This is also why there is a get label method in the Cartoon class that allows the Pane Organizer class
+           to access the label and change its text in the key handler. I've decided that it would be easier to use the
+           get label method and have direct access to the root by placing the key handler in the Pane Organizer class.
+        3. There are four getter methods that return the food shapes in the Table class. This is because the Cartoon
+           class needs access to the foods in order to make them disappear when "eaten".
+
+Known Bugs: None
+
+Hours: This project took me approximately 10 hours to complete.
